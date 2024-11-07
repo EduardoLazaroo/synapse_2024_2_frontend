@@ -1,0 +1,202 @@
+.landing-container {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  background-color: #111;
+
+  .header {
+    background-color: #ff7518;
+    padding: 1vh;
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sign-in-button {
+        height: 4rem;
+        width: 7rem;
+        border-radius: 5px;
+        background-color: #ff3500;
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+      }
+      .sign-in-button:hover {
+        background-color: #d63d17;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("https://images5.alphacoders.com/137/thumb-1920-1370955.png")
+        no-repeat center center;
+    background-size: cover;
+    height: 30vh;
+
+    .hero-content {
+      max-width: 50%;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin: 3vh 0;
+      }
+
+      .btn-start {
+        background-color: #ff7518;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+    }
+
+    .hero-image {
+      max-width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .about-section,
+  .characters-section {
+    padding: 24px;
+    text-align: center;
+
+    .character-list {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+
+      .character-card {
+        background-color: #222;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 200px;
+        text-align: center;
+
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+  }
+
+  // Responsividade para tablets (768px a 1024px)
+  @media screen and (max-width: 1024px) {
+    .hero {
+      flex-direction: column;
+      padding: 5vh;
+      height: auto;
+
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
+      .hero-image {
+        max-width: 80%;
+        margin-top: 2vh;
+      }
+    }
+
+    .about-section,
+    .characters-section {
+      padding: 16px;
+
+      .character-list {
+        flex-direction: column;
+
+        .character-card {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  // Responsividade para dispositivos móveis (menos de 768px)
+  @media screen and (max-width: 768px) {
+    .header .navbar {
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        font-size: 1.2rem;
+      }
+    }
+
+    .hero {
+      flex-direction: column;
+      padding: 5vh;
+      height: auto;
+
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .btn-start {
+          font-size: 1rem;
+          padding: 8px 16px;
+        }
+      }
+
+      .hero-image {
+        max-width: 100%;
+        margin-top: 2vh;
+      }
+    }
+
+    .about-section,
+    .characters-section {
+      padding: 16px;
+
+      .character-list {
+        flex-direction: column;
+
+        .character-card {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .footer {
+      font-size: 0.8rem;
+    }
+  }
+}
